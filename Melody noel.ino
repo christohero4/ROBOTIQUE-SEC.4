@@ -1,9 +1,9 @@
-int speakerPin = 9;
+int speakerPin = 9; // sortie audio pour le speaker
 
-int length = 15; // the number of notes
-char notes[] = "ccggaagffeeddc "; // a space represents a rest
-int beats[] = { 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 4 };
-int tempo = 300;
+int length = 15; // le nombre the notes
+char notes[] = "ccggaagffeeddc "; // le Do Re Mi... en anglais
+int beats[] = { 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 4 };// le batement de la melodie
+int tempo = 300; //duré de chaque tempo
 
 void playTone(int tone, int duration) {
   for (long i = 0; i < duration * 1000L; i += tone * 2) {
