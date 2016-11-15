@@ -4,7 +4,7 @@ int length = 15; // le nombre the notes
 char notes[] = "ccggaagffeeddc "; // le Do Re Mi... en anglais
 int beats[] = { 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 4 };// le batement de la melodie
 int tempo = 300; //duré de chaque tempo
-
+// setup du program ( ex: tone)
 void playTone(int tone, int duration) {
   for (long i = 0; i < duration * 1000L; i += tone * 2) {
     digitalWrite(speakerPin, HIGH);
@@ -29,7 +29,7 @@ void playNote(char note, int duration) {
 void setup() {
   pinMode(speakerPin, OUTPUT);
 }
-
+//debut de la melodie (en repetition infinie)
 void loop() {
   for (int i = 0; i < length; i++) {
     if (notes[i] == ' ') {
