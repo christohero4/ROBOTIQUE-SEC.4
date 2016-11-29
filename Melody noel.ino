@@ -18,7 +18,7 @@ void playNote(char note, int duration) {
   char names[] = { 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'C' };
   int tones[] = { 1915, 1700, 1519, 1432, 1275, 1136, 1014, 956 };
 
-  // play the tone corresponding to the note name
+  // JOUER LA BONNE TONNALITÉ
   for (int i = 0; i < 8; i++) {
     if (names[i] == note) {
       playTone(tones[i], duration);
@@ -38,7 +38,7 @@ void loop() {
       playNote(notes[i], beats[i] * tempo);
     }
 
-    // pause between notes
+    // pause entre les notes
     delay(tempo / 2); 
   }
 }
